@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo sed -i 's/#Port 22/Port 1027/' /etc/ssh/sshd_config
+
+sudo  service sshd restart
+
 apt install screen -y
 
 sudo wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw64"
